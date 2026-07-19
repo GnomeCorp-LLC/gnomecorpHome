@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html>
+
+
     <head>
         <title>GnomeCorp LLC. > About</title>
     
     </head>
     <body>
-        <div>IM A PLACEHOLDER HAHAHAHRAEHARHJKHRKAJGKHR explodes</div>
+        <div class="compLabel" id="homeLabelButton">GnomeCorp   <a href="../index.html"> <img src="/favicon.svg">    </a>    </div>
+        <!-- <div></div> -->
+
+
+
+        <h3 id="branchServiceHeader3" class="branchServiceHeader">Our Branches & Services
+            
+        </h3>
+        <h4 id="bsh3desc" class="shXdesc">Here at GnomeCorp Enterprises, we offer many unique and innovative services, across
+                all of our branches, take a look below!
+            </h4>
+
+
+        <pre id="branchesAndServices"> 
+          
+        </pre>
+    
+        
+    <script id="load services.md">
+        fetch('./services.md')
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(text) {
+                document.getElementById('branchesAndServices').textContent = text;
+            })
+    </script>
+    
+    
     </body>
 </html>
