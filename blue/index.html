@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>GnomeCorp LLC. > About</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+    <link rel="stylesheet" href="./blue.css">
+   
+  </head>
+  <body>
+    <div class="compLabel" id="homeLabelButton">
+      GnomeCorp <a href="../index.html"><img src="/favicon.svg" alt="Home"></a>
+    </div>
 
+    <h1 id="branchServiceHeader3" class="branchServiceHeader">Our Branches & Services</h1>
+    <h3 id="bsh3desc" class="shXdesc">
+      Here at GnomeCorp Enterprises, we offer many unique and innovative services, across all of our branches, take a look below!
+    </h3>
 
-    <head>
-        <title>GnomeCorp LLC. > About</title>
-    
-    </head>
-    <body>
-        <div class="compLabel" id="homeLabelButton">GnomeCorp   <a href="../index.html"> <img src="/favicon.svg">    </a>    </div>
-        <!-- <div></div> -->
+    <div id="branchesAndServices"></div>
 
+    <script>
+      marked.setOptions({
+        gfm: true,
+        breaks: true
+      });
 
-
-        <h3 id="branchServiceHeader3" class="branchServiceHeader">Our Branches & Services
-            
-        </h3>
-        <h4 id="bsh3desc" class="shXdesc">Here at GnomeCorp Enterprises, we offer many unique and innovative services, across
-                all of our branches, take a look below!
-            </h4>
-
-
-        <pre id="branchesAndServices"> 
-          
-        </pre>
-    
-        
-    <script id="load services.md">
-        fetch('./services.md')
-            .then(function(response) {
-                return response.text();
-            })
-            .then(function(text) {
-                document.getElementById('branchesAndServices').textContent = text;
-            })
+      fetch('./services.md')
+        .then(function (response) {
+          if (!response.ok) throw new Error('Could not load services.md');
+          return response.text();
+        })
+        .then(function (markdownText) {
+          var renderedHtml = marked.parse(markdownText);
+          var safeHtml = DOMPurify.sanitize(renderedHtml);
+          document.getElementById('branchesAndServices').innerHTML = safeHtml;
+        })
+        .catch(function (err) {
+          document.getElementById('branchesAndServices').textContent = err.message;
+        });
     </script>
-    
-    
-    </body>
+  </body>
 </html>
