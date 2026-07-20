@@ -1,5 +1,65 @@
 #branchesAndServices {
-    font-family: 'JetBrains Mono';
-    /* text-wrap: ; */
-    text-overflow: break-word;
+    font-family: 'JetBrains Mono', monospace;
+    white-space: normal;           /* important no prewrap on container */
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.35;
+}
+
+#branchesAndServices p,
+#branchesAndServices ul,
+#branchesAndServices ol,
+#branchesAndServices h1,
+#branchesAndServices h2,
+#branchesAndServices h3,
+#branchesAndServices h4 {
+    margin: 0.35rem 0;
+}
+
+#branchesAndServices pre,
+#branchesAndServices code {
+    white-space: pre-wrap;         /* keep only for code blocks */
+    overflow-wrap: anywhere;
+}
+
+
+#branchServiceHeader3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  text-indent: 1.7em;
+}
+
+#bsh3desc {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style:oblique;
+  border-bottom: 0.23em;
+  /* border-color: black; */
+  /* border-radius: 0.07em; */
+  border-style: solid;
+  border-top: hidden;
+  border-left: hidden;
+  border-right: hidden;
+}
+
+#homeLabelButton {
+  display: inline-flex;
+  align-items: center;   /* vertical center */
+  gap: 0.4em;
+  font-family: 'Ubuntu Mono', monospace;
+  font-style: oblique;
+  font-size: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+#homeLabelText {
+  transform: translateY(0.68em);  /* slight move down; adjust or remove */
+}
+
+#imgHome {
+  display: block;
+  max-height: 6em;
+  align-self: flex-end;
+  border-radius: 0.6em;
+  
+  
 }

@@ -9,7 +9,8 @@
   </head>
   <body>
     <div class="compLabel" id="homeLabelButton">
-      GnomeCorp <a href="../index.html"><img src="/favicon.svg" alt="Home"></a>
+      <span id="homeLabelText">GnomeCorp</span>
+      <a href="../index.html"><img id="imgHome" src="../favicon.svg" alt="Home"></a>
     </div>
 
     <h1 id="branchServiceHeader3" class="branchServiceHeader">Our Branches & Services</h1>
@@ -22,7 +23,7 @@
     <script>
       marked.setOptions({
         gfm: true,
-        breaks: true
+        breaks: false
       });
 
       fetch('./services.md')
