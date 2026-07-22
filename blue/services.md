@@ -32,6 +32,9 @@
 #### GnomeCorp. Weapons & Defense Management - (GWDM)
         Effectivley our millitary, GWDM manages all weapons, defense, and millitaristic actions of the corporation, only engaging in full on attack in truly dire situations
 
+#### GnomeCorp. LLC. Enterprises Marketing, Hiring & Product Research - (GLEMHPR)
+        Responsible for all marketing and sales tracking of products, as well as creating forums and such, and dont forget hiring candidates!
+
 #### GnomeCorp. LLC. Enterprises Offical Department of Weather & Radar - (GLEODWR) 
         Weather department! Also manages GPS, tracking services, etc. on upper-atmospheric satellites on Earth, and nearby surrounding colonized systems, does not manage satellite or weather data past system XBZV1WX-A1B (Binary A1B In cluster V1WX)
 
